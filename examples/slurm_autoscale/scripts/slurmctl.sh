@@ -4,12 +4,12 @@ yum install -y epel-release screen
 
 yum install perl-ExtUtils-MakeMaker gcc mariadb-devel openssl openssl-devel pam-devel rpm-build numactl numactl-devel hwloc hwloc-devel lua lua-devel readline-devel rrdtool-devel ncurses-devel man2html libibmad libibumad -y
 
-if [ ! -f "slurm-19.05.5.tar.bz2" ]; then
-  wget https://download.schedmd.com/slurm/slurm-19.05.5.tar.bz2
+if [ ! -f "slurm-20.11.7.tar.bz2" ]; then
+  wget https://download.schedmd.com/slurm/slurm-20.11.7.tar.bz2
 fi
 
 if [ ! -f "/apps/rpms/slurm*.rpm" ]; then
-  rpmbuild -ta slurm-19.05.5.tar.bz2
+  rpmbuild -ta slurm-20.11.7.tar.bz2
   mkdir -p /apps/rpms
   cp /root/rpmbuild/RPMS/x86_64/slurm-* /apps/rpms/
 fi
