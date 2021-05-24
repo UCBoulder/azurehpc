@@ -74,7 +74,8 @@ DebugFlags=PowerSave
 PrivateData=cloud
 ReturnToService=2
 
-SallocDefaultCommand="srun --mem-per-cpu=0 --cpu_bind=no --preserve-env --pty $SHELL"
+#SAlloc Default is no longer supported
+#SallocDefaultCommand="srun --mem-per-cpu=0 --cpu_bind=no --preserve-env --pty $SHELL"
 
 include /apps/slurm/nodes.conf
 include /apps/slurm/partitions.conf
